@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.active{
+   @apply bg-[#1ABC9C];
+
+}
+.navintro{
+   background-color:#2C3E50 !important;
+}
