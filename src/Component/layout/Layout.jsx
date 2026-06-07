@@ -1,17 +1,21 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";   // تمت الإضافة
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
-export default function Layout() {
+function Layout() {
+  const location = useLocation();
+  const { t } = useTranslation();   // جاهز لاستخدام الترجمة
+
+  const hideFooter = location.pathname.startsWith("/admin");
+
   return (
     <>
-    <Navbar/>
-    
-    <Outlet/>
-
-    <Footer/>
-      
+      <Navbar />
+      <Outlet />
+      {!hideFooter && <Footer />}
     </>
-  )
+  );
 }
+
+export default Layout;

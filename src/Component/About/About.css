@@ -1,0 +1,1732 @@
+/* ==================== Global Styles RTL ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: #0a0f1a;
+  overflow-x: hidden;
+  direction: rtl;
+  text-align: right;
+}
+
+.app {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==================== Section Header ==================== */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(227, 24, 55, 0.15), rgba(255, 107, 107, 0.1));
+  color: #E31837;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(227, 24, 55, 0.3);
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1a2a3a;
+  margin-bottom: 15px;
+}
+
+.section-title.white {
+  color: #fff;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #E31837, #FF6B6B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #E31837, #FF6B6B);
+  margin: 20px auto;
+  border-radius: 4px;
+}
+
+.section-desc {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==================== Animation ==================== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== Hero Section ==================== */
+.hero-section {
+  background: linear-gradient(135deg, #0a0f1a 0%, #1a1f2e 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(227, 24, 55, 0.1), transparent);
+  pointer-events: none;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(227, 24, 55, 0.2), rgba(255, 107, 107, 0.1));
+  color: #E31837;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border: 1px solid rgba(227, 24, 55, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(227, 24, 55, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(227, 24, 55, 0); }
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-desc {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat .stat-number {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  color: #E31837;
+}
+
+.hero-stat .stat-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(227, 24, 55, 0.1), rgba(0, 0, 0, 0.3));
+  padding: 60px 40px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-placeholder i {
+  font-size: 80px;
+  color: #E31837;
+  margin-bottom: 20px;
+}
+
+.hero-placeholder h3 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hero-placeholder p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.floating-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-card i {
+  color: #E31837;
+  font-size: 18px;
+}
+
+.floating-card span {
+  font-weight: 600;
+  color: #1a2a3a;
+}
+
+.floating-card-1 {
+  top: 20px;
+  right: -20px;
+  animation-delay: 0s;
+}
+
+.floating-card-2 {
+  bottom: 40px;
+  left: -20px;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* ==================== Maintenance Schedule Section ==================== */
+.maintenance-schedule-section {
+  background: linear-gradient(135deg, #0f1420, #0a0f1a);
+}
+
+.model-filter, .mileage-filter {
+  margin-bottom: 40px;
+}
+
+.filter-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.filter-title i {
+  color: #E31837;
+  font-size: 20px;
+}
+
+.filter-buttons, .mileage-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.model-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Cairo', sans-serif;
+}
+
+.model-btn i {
+  font-size: 16px;
+}
+
+.model-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.model-btn.active {
+  border-width: 2px;
+  transform: translateY(-3px);
+}
+
+.mileage-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Cairo', sans-serif;
+}
+
+.mileage-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mileage-btn.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #E31837;
+}
+
+.mileage-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mileage-icon i {
+  font-size: 20px;
+}
+
+.mileage-info {
+  text-align: right;
+}
+
+.mileage-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.mileage-desc {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mileage-level {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+}
+
+/* ==================== IMPROVED SERVICES DISPLAY - COMPACT & BEAUTIFUL ==================== */
+.services-container {
+  margin-top: 30px;
+}
+
+.current-mileage-banner {
+  margin-bottom: 25px;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: linear-gradient(135deg, rgba(227, 24, 55, 0.15), rgba(0, 0, 0, 0.3));
+  border-radius: 16px;
+  padding: 15px 25px;
+  border: 1px solid rgba(227, 24, 55, 0.3);
+  flex-wrap: wrap;
+}
+
+.banner-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-icon i {
+  font-size: 24px;
+}
+
+.banner-text h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.banner-text p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+}
+
+.banner-badge {
+  margin-right: auto;
+  padding: 5px 15px;
+  border-radius: 50px;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Compact Services Grid */
+.services-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-section {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 15px 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(227, 24, 55, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-icon i {
+  font-size: 20px;
+  color: #E31837;
+}
+
+.category-header h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.category-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(227, 24, 55, 0.5), transparent);
+}
+
+/* Compact Service Cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(227, 24, 55, 0.3);
+}
+
+.service-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.service-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(227, 24, 55, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon i {
+  font-size: 20px;
+  color: #E31837;
+}
+
+.save-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+}
+
+.save-btn:hover {
+  background: rgba(227, 24, 55, 0.3);
+  transform: scale(1.1);
+}
+
+.save-btn.saved {
+  background: rgba(227, 24, 55, 0.3);
+  color: #E31837;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-info h4 {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.service-details {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.detail-item i {
+  width: 14px;
+  color: #E31837;
+  font-size: 11px;
+}
+
+.importance-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.importance-tag.critical {
+  background: rgba(227, 24, 55, 0.2);
+  color: #E31837;
+}
+
+.importance-tag.high {
+  background: rgba(243, 156, 18, 0.2);
+  color: #F39C12;
+}
+
+.importance-tag.normal {
+  background: rgba(52, 152, 219, 0.2);
+  color: #3498DB;
+}
+
+/* ==================== UNIFIED CHECKER & OIL SECTION STYLES ==================== */
+.checker-section,
+.oil-checker-section {
+  background: linear-gradient(135deg, #0f1420, #0a0f1a);
+}
+
+/* Same box style for both sections */
+.checker-box,
+.oil-checker-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 35px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Same input group style */
+.checker-inputs,
+.oil-checker-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Unified input group */
+.input-group {
+  width: 100%;
+  position: relative;
+}
+
+.input-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.input-group label i {
+  color: #E31837;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Cairo', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #E31837;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.input-unit {
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+}
+
+/* Unified button style */
+.checker-btn,
+.oil-checker-btn {
+  background: linear-gradient(135deg, #E31837, #FF6B6B);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'Cairo', sans-serif;
+  width: 100%;
+}
+
+.checker-btn:hover,
+.oil-checker-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(227, 24, 55, 0.3);
+}
+
+/* Engine Type Buttons - Same style as model filter */
+.engine-type-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.engine-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Cairo', sans-serif;
+}
+
+.engine-btn i {
+  font-size: 16px;
+}
+
+.engine-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.engine-btn.active {
+  background: rgba(227, 24, 55, 0.2);
+  border-color: #E31837;
+  color: #E31837;
+}
+
+/* Unified Result Styles */
+.checker-result,
+.oil-result {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.checker-result.overdue,
+.oil-result.critical {
+  background: rgba(227, 24, 55, 0.15);
+  border: 1px solid rgba(227, 24, 55, 0.3);
+}
+
+.checker-result.upcoming,
+.oil-result.warning {
+  background: rgba(243, 156, 18, 0.15);
+  border: 1px solid rgba(243, 156, 18, 0.3);
+}
+
+.oil-result.good {
+  background: rgba(39, 174, 96, 0.15);
+  border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.result-icon,
+.oil-status-icon {
+  margin-bottom: 15px;
+}
+
+.result-icon i,
+.oil-status-icon i {
+  font-size: 45px;
+}
+
+.checker-result.overdue .result-icon i,
+.oil-result.critical .oil-status-icon i {
+  color: #E31837;
+}
+
+.checker-result.upcoming .result-icon i,
+.oil-result.warning .oil-status-icon i {
+  color: #F39C12;
+}
+
+.oil-result.good .oil-status-icon i {
+  color: #27AE60;
+}
+
+.result-text h4,
+.oil-status-text h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.checker-result.overdue .result-text h4,
+.oil-result.critical .oil-status-text h4 {
+  color: #E31837;
+}
+
+.checker-result.upcoming .result-text h4,
+.oil-result.warning .oil-status-text h4 {
+  color: #F39C12;
+}
+
+.oil-result.good .oil-status-text h4 {
+  color: #27AE60;
+}
+
+.result-text p,
+.oil-status-text p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+/* Progress Bar - Same for both */
+.result-progress,
+.oil-progress-section {
+  margin: 20px 0;
+}
+
+.progress-label,
+.oil-progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+}
+
+.progress-percentage,
+.oil-percentage {
+  font-weight: 700;
+  color: white;
+}
+
+.progress-bar,
+.oil-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill,
+.oil-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* Checks List - Same for both */
+.checker-checks-status,
+.oil-checks-status {
+  margin: 20px 0;
+}
+
+.checker-checks-status h4,
+.oil-checks-status h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.checker-checks-status h4 i,
+.oil-checks-status h4 i {
+  color: #E31837;
+}
+
+.checks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.check-item.passed .check-icon i {
+  color: #27AE60;
+}
+
+.check-item.failed .check-icon i {
+  color: #E31837;
+}
+
+.check-icon i {
+  font-size: 18px;
+}
+
+.check-info {
+  flex: 1;
+}
+
+.check-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 3px;
+}
+
+.check-desc {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.result-km {
+  margin-top: 15px;
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.result-km span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.result-km strong {
+  color: white;
+  font-size: 16px;
+}
+
+/* Oil Recommendation */
+.oil-recommendation {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.rec-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rec-header i {
+  font-size: 20px;
+  color: #E31837;
+}
+
+.rec-header span {
+  color: white;
+  font-weight: 600;
+}
+
+.rec-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rec-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.rec-item label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  min-width: 90px;
+}
+
+.rec-item strong {
+  color: #E31837;
+  font-size: 14px;
+}
+
+.rec-item span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+}
+
+/* Oil Action Button */
+.oil-action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.action-btn {
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: 'Cairo', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-btn.critical {
+  background: #E31837;
+  color: white;
+}
+
+.action-btn.warning {
+  background: #F39C12;
+  color: white;
+}
+
+.action-btn.good {
+  background: #27AE60;
+  color: white;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* Maintenance Reminder - Same for both */
+.maintenance-reminder,
+.oil-tips {
+  margin-top: 30px;
+  text-align: center;
+  padding: 15px;
+  background: rgba(243, 156, 18, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.maintenance-reminder i,
+.oil-tips i {
+  font-size: 20px;
+  color: #F39C12;
+}
+
+.maintenance-reminder p,
+.oil-tips p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.maintenance-reminder strong,
+.oil-tips strong {
+  color: #F39C12;
+}
+
+/* Oil Methods */
+.oil-methods {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  animation: slideUpResult 0.4s ease;
+}
+
+.oil-methods h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.oil-methods h4 i {
+  color: #E31837;
+}
+
+.methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.method-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.method-card:hover {
+  transform: translateX(-5px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.method-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.method-title i {
+  color: #27AE60;
+  font-size: 16px;
+}
+
+.method-title span {
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.method-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 28px;
+}
+
+.method-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.step-number {
+  width: 20px;
+  height: 20px;
+  background: rgba(227, 24, 55, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: #E31837;
+}
+
+/* Oil Tips Grid */
+.oil-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.oil-tip-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.oil-tip-card i {
+  color: #27AE60;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.oil-tip-card strong {
+  display: block;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.oil-tip-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* ==================== Tips Section ==================== */
+.tips-section {
+  background: linear-gradient(135deg, #0f1420, #0a0f1a);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.tip-card {
+  display: flex;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 22px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(227, 24, 55, 0.2);
+}
+
+.tip-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tip-icon i {
+  font-size: 24px;
+}
+
+.tip-content {
+  flex: 1;
+}
+
+.tip-content h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.tip-content p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.tip-level {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+/* ==================== New Service Section ==================== */
+.new-service-section {
+  background: linear-gradient(135deg, #0f1420, #0a0f1a);
+}
+
+.new-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.new-service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.new-service-card:hover {
+  transform: translateY(-8px);
+}
+
+.new-service-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.new-service-card:hover .new-service-icon {
+  transform: scale(1.1);
+}
+
+.new-service-icon i {
+  font-size: 32px;
+}
+
+.new-service-card h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.new-service-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.new-service-price {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.new-service-offer {
+  background: linear-gradient(135deg, rgba(227, 24, 55, 0.15), rgba(0, 0, 0, 0.2));
+  border-radius: 24px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: 1px solid rgba(227, 24, 55, 0.2);
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(227, 24, 55, 0.2); }
+  50% { box-shadow: 0 0 0 15px rgba(227, 24, 55, 0); }
+}
+
+.offer-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(227, 24, 55, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-icon i {
+  font-size: 28px;
+  color: #E31837;
+}
+
+.offer-text h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.offer-text p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.offer-btn {
+  background: linear-gradient(135deg, #E31837, #FF6B6B);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Cairo', sans-serif;
+}
+
+.offer-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(227, 24, 55, 0.3);
+  gap: 15px;
+}
+
+/* ==================== Modal Styles ==================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #1a1f2e, #0f1420);
+  border-radius: 30px;
+  max-width: 550px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 30px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: #E31837;
+  transform: rotate(90deg);
+}
+
+.modal-service-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(227, 24, 55, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.modal-service-icon i {
+  font-size: 32px;
+  color: #E31837;
+}
+
+.modal-content h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.modal-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 12px;
+  text-align: right;
+}
+
+.modal-info-item i {
+  font-size: 18px;
+  color: #E31837;
+}
+
+.modal-info-item label {
+  display: block;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-info-item span {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.importance-text.critical {
+  color: #E31837;
+}
+
+.modal-description {
+  text-align: right;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+}
+
+.modal-description h3 {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-description h3 i {
+  color: #E31837;
+}
+
+.modal-description p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.toyota-warning {
+  margin-top: 15px;
+  padding: 12px;
+  background: rgba(227, 24, 55, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-right: 3px solid #E31837;
+}
+
+.toyota-warning i {
+  color: #E31837;
+}
+
+.toyota-warning span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #E31837, #FF6B6B);
+  border: none;
+  padding: 12px 35px;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Cairo', sans-serif;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(227, 24, 55, 0.3);
+}
+
+/* ==================== Error Styles ==================== */
+.error-input {
+  border-color: #E31837 !important;
+  background: rgba(227, 24, 55, 0.1) !important;
+}
+
+.error-message {
+  display: block;
+  font-size: 11px;
+  color: #E31837;
+  margin-top: 5px;
+  padding-right: 10px;
+}
+
+/* ==================== Scrollbar ==================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1f2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E31837;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B6B;
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 992px) {
+  .section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 36px;
+  }
+  .hero-title {
+    font-size: 42px;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+  .banner-badge {
+    margin-right: 0;
+  }
+  .modal-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .model-btn, .mileage-btn, .engine-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .mileage-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .mileage-icon i {
+    font-size: 16px;
+  }
+  .mileage-desc {
+    display: none;
+  }
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+  .floating-card-1,
+  .floating-card-2 {
+    display: none;
+  }
+  .new-service-offer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .methods-list {
+    gap: 10px;
+  }
+  .method-card {
+    padding: 12px;
+  }
+  .method-steps {
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+  .checker-inputs,
+  .oil-checker-inputs {
+    flex-direction: column;
+  }
+  .checker-btn,
+  .oil-checker-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .engine-type-buttons {
+    justify-content: center;
+  }
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .service-details {
+    justify-content: center;
+  }
+  .modal-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
